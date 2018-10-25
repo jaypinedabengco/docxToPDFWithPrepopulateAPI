@@ -8,9 +8,15 @@ const mustache = require('mustache')
 describe('HTMLToPDFWithPrepopulateWithHeaderAndFooter', () => {
   let start = Date.now()
   it('Should not throw any error', () => {
+      let listOfItems = []
+    for (let i = 0; i < 5000; i++) {
+        listOfItems.push((Math.random() * 10000) + '-Random-Item-then-again-this-is-just-to-occupy-white-spaces-blahblahblah')
+    }
+
     let data = {
-      name: 'hello',
-      lastname: 'world'
+      name: 'hellodfddr',
+      lastname: 'worldx', 
+      listOfItems: listOfItems
     }
 
     let rendered = mustache.render(htmlString, data)
