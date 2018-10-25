@@ -116,7 +116,7 @@ const getElementsDimensions = async(querySelector, html) => {
   })
 
   // load empty local html (dummy url on local)
-  await page.open('http://localhost:3000/empty')
+  // await page.open('http://localhost:3000/empty')
 
   // change content
   await page.property('content', html)
